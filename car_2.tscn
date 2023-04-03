@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bajqyfdidy2lu"]
+
+[ext_resource type="Script" path="res://car_2.gd" id="1_60di7"]
+[ext_resource type="Texture2D" uid="uid://c1f70054pofjm" path="res://assets/texture_09.png" id="1_rqohb"]
+[ext_resource type="PackedScene" uid="uid://b7to78d8cuybh" path="res://assets/GLTF format/suv.glb" id="2_wv6cm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dtpcx"]
+bounce = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ywja5"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vviip"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.643137)
+albedo_texture = ExtResource("1_rqohb")
+uv1_scale = Vector3(6, 3, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_00jmq"]
+material = SubResource("StandardMaterial3D_vviip")
+radius = 1.0
+height = 2.0
+
+[node name="Car2" type="RigidBody3D"]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_dtpcx")
+gravity_scale = 5.0
+angular_damp = 10.0
+script = ExtResource("1_60di7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ywja5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("SphereMesh_00jmq")
+
+[node name="suv" parent="." instance=ExtResource("2_wv6cm")]
+top_level = true
+
+[node name="RayCast3D" type="RayCast3D" parent="suv"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.5, 2.08165e-12)
