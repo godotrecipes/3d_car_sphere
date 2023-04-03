@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgfan31ve5nog"]
+[gd_scene load_steps=13 format=3 uid="uid://dov4h4ifh60v7"]
 
 [ext_resource type="Texture2D" uid="uid://0wof2ikeolop" path="res://assets/texture_01.png" id="1_tbqoc"]
-[ext_resource type="PackedScene" uid="uid://bajqyfdidy2lu" path="res://car_2.tscn" id="3_jaglt"]
+[ext_resource type="PackedScene" uid="uid://cvh0fwg53wpus" path="res://car.tscn" id="3_jaglt"]
 [ext_resource type="Script" path="res://Camera3D.gd" id="3_opq1w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_74a4f"]
