@@ -24,7 +24,7 @@ height = 2.0
 [node name="Car" type="RigidBody3D"]
 collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_dtpcx")
-gravity_scale = 5.0
+gravity_scale = 3.0
 angular_damp = 10.0
 script = ExtResource("1_0cfhi")
 
@@ -32,10 +32,11 @@ script = ExtResource("1_0cfhi")
 shape = SubResource("SphereShape3D_ywja5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+visible = false
 mesh = SubResource("SphereMesh_00jmq")
 
-[node name="suv" parent="." instance=ExtResource("2_wv6cm")]
+[node name="CarMesh" parent="." instance=ExtResource("2_wv6cm")]
 top_level = true
 
-[node name="RayCast3D" type="RayCast3D" parent="suv"]
+[node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.5, 2.08165e-12)

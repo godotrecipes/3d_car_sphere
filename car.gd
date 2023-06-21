@@ -1,8 +1,8 @@
 extends RigidBody3D
 
 var sphere_offset = Vector3.DOWN
-var acceleration = 40.0
-var steering = 18.0
+var acceleration = 35.0
+var steering = 19.0
 var turn_speed = 4.0
 var turn_stop_limit = 0.75
 var body_tilt = 35
@@ -10,11 +10,11 @@ var body_tilt = 35
 var speed_input = 0
 var turn_input = 0
 
-@onready var car_mesh = $suv
-@onready var body_mesh = $suv/suv2
-@onready var ground_ray = $suv/RayCast3D
-@onready var right_wheel = $suv/suv2/wheel_frontRight
-@onready var left_wheel = $suv/suv2/wheel_frontLeft
+@onready var car_mesh = $CarMesh
+@onready var body_mesh = $CarMesh/suv2
+@onready var ground_ray = $CarMesh/RayCast3D
+@onready var right_wheel = $CarMesh/suv2/wheel_frontRight
+@onready var left_wheel = $CarMesh/suv2/wheel_frontLeft
 
 #func _ready():
 #	ground_ray.add_exception(self)
