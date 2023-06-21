@@ -38,7 +38,7 @@ func _process(delta):
 		car_mesh.global_transform.basis = car_mesh.global_transform.basis.slerp(new_basis, turn_speed * delta)
 		car_mesh.global_transform = car_mesh.global_transform.orthonormalized()
 		var t = -turn_input * linear_velocity.length() / body_tilt
-		body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10.0 * delta)
+		body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 5.0 * delta)
 		if ground_ray.is_colliding():
 			var n = ground_ray.get_collision_normal()
 			var xform = align_with_y(car_mesh.global_transform, n)
