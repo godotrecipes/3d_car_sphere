@@ -47,5 +47,5 @@ func _process(delta):
 func align_with_y(xform, new_y):
 	xform.basis.y = new_y
 	xform.basis.x = -xform.basis.z.cross(new_y)
-	xform.basis = xform.basis.orthonormalized()
+#	xform.basis = xform.basis.orthonormalized()
 	return xform.orthonormalized()

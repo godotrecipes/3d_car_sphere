@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="3d_car_sphere"
-run/main_scene="res://assets/GLTF format/suv.glb"
-config/features=PackedStringArray("4.0", "Forward Plus")
+run/main_scene="res://track.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
