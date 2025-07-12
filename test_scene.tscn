@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0wof2ikeolop" path="res://assets/texture_01.png" id="1_tbqoc"]
 [ext_resource type="PackedScene" uid="uid://cvh0fwg53wpus" path="res://car.tscn" id="3_jaglt"]
-[ext_resource type="Script" path="res://Camera3D.gd" id="3_opq1w"]
+[ext_resource type="Script" uid="uid://cvuwsasmbq25i" path="res://Camera3D.gd" id="3_opq1w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_74a4f"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -26,7 +26,7 @@ material = SubResource("StandardMaterial3D_cv6gg")
 size = Vector2(50, 50)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cvbi4"]
-size = Vector3(50, 0.5, 50)
+size = Vector3(100, 0.5, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj28r"]
 albedo_texture = ExtResource("1_tbqoc")
@@ -73,5 +73,6 @@ mesh = SubResource("BoxMesh_jugg0")
 shape = SubResource("ConcavePolygonShape3D_md76x")
 
 [node name="Car" parent="." instance=ExtResource("3_jaglt")]
+mass = 1.5
 
 [editable path="Car"]

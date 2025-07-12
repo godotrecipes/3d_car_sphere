@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dta0aubqubx5g" path="res://assets/track_2.glb" id="1_nhwcv"]
 [ext_resource type="PackedScene" uid="uid://cvh0fwg53wpus" path="res://car.tscn" id="2_sl2w6"]
-[ext_resource type="Script" path="res://Camera3D.gd" id="3_r0uie"]
+[ext_resource type="Script" uid="uid://cvuwsasmbq25i" path="res://Camera3D.gd" id="3_r0uie"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ppva"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
